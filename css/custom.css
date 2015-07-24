@@ -7,8 +7,13 @@ a {
   color: #222;
 }
 
+header {
+  margin-top: 3rem;
+}
+
 header h1 {
   text-align: center;
+  letter-spacing: 2rem;
 }
 
 nav {
@@ -28,11 +33,11 @@ nav ul {
 nav li {
   display: inline;
   margin-bottom: 0px;
+  font-size: 1.5rem;
 }
 
 nav a {
   text-transform: lowercase;
-  font-size: 11px;
   font-weight: 600;
   letter-spacing: .2rem;
   margin-left: 15px;
@@ -41,9 +46,26 @@ nav a {
 }
 
 article {
+  padding: 4rem 0;
   border-bottom: 1px solid #eee;
+}
+
+article h2 {
+  font-size: 3.5rem;
+}
+
+article p {
+  letter-spacing: 0.1rem;
 }
 
 footer {
   text-align: center;
+}
+
+.newer-posts {
+  float: left;
+}
+
+.older-posts {
+  float: right;
 }
