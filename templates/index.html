@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+  {% for article in articles_page.object_list %}
+    <article>
+      <h2><a href="{{ SITEURL }}/{{ article.url }}">{{ article.title }}</a></h2>
+      <p>Written on {{ article.date.strftime("%A %B %d, %Y") }}</p>
+      <p>{{ article.content }}
+    </article>
+  {% endfor %}
+
+{% endblock %}
+
+{% block pagination %}
+  {% if articles_page.has_previous() or articles_page.has_next() %}
+  <nav>
+    <ul>
+      {% if articles_page.has_previous() %}
+        <li class="newer-posts"><a href="{{ SITEURL }}/{{ articles_previous_page.url }}">&larr; Newer posts</a></li>
+      {% endif %}
+      {% if articles_page.has_next() %}
+        <li class="older-posts"><a href="{{ SITEURL }}/{{ articles_next_page.url }}">Older posts &rarr;</a></li>
+      {% endif %}
+    </ul>
+  </nav>
+  {% endif %}
+{% endblock %}

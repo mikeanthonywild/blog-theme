@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  <!-- Basic Page Needs
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <meta charset="utf-8">
+  {% if page_title %}
+    <title>{{ page_title }} – {{ SITENAME }}</title>
+  {% else %}
+    <title>{{ SITENAME }}</title>
+  {% endif %}
+  <meta name="description" content="Blah blah blah">
+  <meta name="author" content="Author goes here">
+
+  <!-- Mobile Specific Metas
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- FONT
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <link href="http://fonts.googleapis.com/css?family=Raleway:400,300,600" rel="stylesheet" type="text/css">
+
+  <!-- CSS
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <link rel="stylesheet" href="{{ SITEURL }}/theme/css/normalize.css">
+  <link rel="stylesheet" href="{{ SITEURL }}/theme/css/skeleton.css">
+  <link rel="stylesheet" href="{{ SITEURL }}/theme/css/custom.css">
+
+  <!-- JS
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+
+  <!-- Favicon
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <link rel="icon" type="image/png" href="{{ SITEURL }}/theme/images/favicon.png">
+
+</head>
+<body>
+
+  <!-- Primary Page Layout
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <div class="container">
+
+    <header>
+      <h1>{{ SITENAME }}</h1>
+
+      <nav>
+        <ul>
+          <li><a href="{{ SITEURL }}">Home</a></li>
+          {% for page in PAGES %}
+            <li><a href="{{ SITEURL }}/{{ page.url }}">{{ page.title }}</a></li>
+          {% endfor %}
+        </ul>
+      </nav>
+    </header>
+
+    {% block content %}
+    {% endblock %}
+
+    <footer>
+      {% block pagination %}
+      {% endblock %}
+      <p>{{ FOOTERTEXT }}</p>
+    </footer>
+
+  </div>
+
+<!-- End Document
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+</body>
+</html>

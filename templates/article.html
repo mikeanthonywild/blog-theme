@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+{% set page_title = article.title|striptags %}
+
+{% block content %}
+
+  <article>
+    <h2><a href="{{ SITEURL }}/{{ article.url }}">{{ article.title }}</a></h2>
+    <p>Written on {{ article.date.strftime("%A %B %d, %Y") }}</p>
+    <p>{{ article.content }}
+  </article>
+
+{% endblock %}
