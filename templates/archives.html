@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+{% set page_title = "Archive" %}
+
+{% block content %}
+
+  <div class="row">
+    <h2>Archive</h2>
+
+    <dl>
+      {% for article in dates %}
+        <dt>{{ article.locale_date }}</dt>
+        <dd><a href="{{ SITEURL }}/{{ article.url }}">{{ article.title }}</a></dd>
+      {% endfor %}
+    </dl>
+  </div>
+
+{% endblock %}
