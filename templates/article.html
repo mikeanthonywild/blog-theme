@@ -1,6 +1,10 @@
 {% extends "base.html" %}
 {% set page_title = article.title|striptags %}
 
+{% block js %}
+  <script data-isso="http://comments.mikeanthonywild.com/" src="http://comments.mikeanthonywild.com/js/embed.min.js"></script>
+{% endblock %}
+
 {% block content %}
 
   <article>
@@ -8,5 +12,7 @@
     <p>Written on {{ article.date.strftime("%A %B %d, %Y") }}</p>
     <p>{{ article.content }}
   </article>
+
+  <section id="isso-thread"></section>
 
 {% endblock %}
