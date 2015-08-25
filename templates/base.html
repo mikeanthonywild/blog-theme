@@ -37,6 +37,10 @@
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
   <link rel="icon" type="image/png" href="{{ SITEURL }}/theme/images/favicon.png">
 
+  <!-- Feed
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <link rel="alternate" type="application/atom+xml" href="{{ SITEURL }}/feeds/all.atom.xml" title="Atom Feed" />
+
 </head>
 <body>
 
@@ -54,6 +58,7 @@
             <li><a href="{{ SITEURL }}/{{ page.url }}">{{ page.title }}</a></li>
           {% endfor %}
           <li><a href="{{ SITEURL }}/archives.html">Archive</a></li>
+          <li><a href="{{ SITEURL }}/{{ FEED_ALL_ATOM }}">Feed</a></li>
         </ul>
       </nav>
     </header>
