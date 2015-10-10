@@ -2,7 +2,7 @@
 {% set page_title = article.title|striptags %}
 
 {% block js %}
-  <script data-isso="http://comments.mikeanthonywild.com/" src="http://comments.mikeanthonywild.com/js/embed.min.js"></script>
+  <script data-isso="{{ SITEURL }}/comments/" src="{{ SITEURL }}/comments/js/embed.min.js"></script>
 {% endblock %}
 
 {% block content %}
