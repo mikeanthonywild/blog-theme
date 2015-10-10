@@ -1,5 +1,9 @@
 {% extends "base.html" %}
 
+{% block js %}
+  <script data-isso="http://comments.mikeanthonywild.com/" src="http://comments.mikeanthonywild.com/js/count.min.js"></script>
+{% endblock %}
+
 {% block content %}
 
   {% for article in articles_page.object_list %}
@@ -7,6 +11,7 @@
       <h2><a href="{{ SITEURL }}/{{ article.url }}">{{ article.title }}</a></h2>
       <p>Written on {{ article.date.strftime("%A %B %d, %Y") }}</p>
       <p>{{ article.content }}
+      <a href="{{ SITE_URL }}/{{ article.url }}#isso-thread">Comments</a>
     </article>
   {% endfor %}
 
