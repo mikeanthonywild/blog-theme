@@ -2,6 +2,10 @@
   max-width: 800px;
 }
 
+ul {
+  list-style: circle;
+}
+
 a {
   color: #222;
 }
